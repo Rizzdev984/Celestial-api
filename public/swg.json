@@ -1,1 +1,520 @@
-
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "nextjs",
+    "title": "Celestial-Api's",
+    "description": "Simple Rest Api Made With Swagger And Base With Balxzz",
+    "contact": {
+      "name": "Chat AI",
+      "url": "https://celestial-flame.vercel.app"
+    },
+     "x-thankyou": "Special thanks to balxz for the inspiration and development of this API!"
+  },
+  "paths": {
+    "/api/openai/gpt3-5-turbo": {
+      "get": {
+        "summary": "",
+        "description": "GPT 3-5 Turbo",
+        "tags": [
+          "Artificial Intelligence"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Bicara Dengan GPT",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/downloader/tiktokdl": {
+      "get": {
+        "summary": "",
+        "description": "tiktok downloader",
+        "tags": [
+          "Downloader"
+        ],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "description": "`Try Paste Tiktok Url`",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "https://vt.tiktok.com/ZSjunPJbq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/downloader/nesamedia": {
+      "get": {
+        "summary": "",
+        "description": "nesamedia downloader",
+        "tags": [
+          "Downloader"
+        ],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "description": "Paste The Url Nasemedia",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "https://www.nesabamedia.com/apps/id/komiku-apk/"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/downloader/brat": {
+      "get": {
+        "summary": "",
+        "description": "brat Downloader",
+        "tags": [
+          "Downloader"
+        ],
+        "parameters": [
+          {
+            "name": "text",
+            "in": "query",
+            "description": "Masukkan Text Anda",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Hello World"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stalker/ttstalk": {
+      "get": {
+        "summary": "",
+        "description": "tiktok stalker with username",
+        "tags": [
+          "Stalker"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "description": "`Try Input Username Tiktok`",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "iqstore78"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stalker/npmstalk": {
+      "post": {
+        "summary": "",
+        "description": "Try Input Package Name",
+        "tags": [
+          "Stalker"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "description": "Try Input Package Name",
+                    "example": "axios"
+                  }
+                },
+                "required": ["text"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stalker/igstalk": {
+      "post": {
+        "summary": "",
+        "description": "instagram stalker with username",
+        "tags": [
+          "Stalker"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "description": "Try Input Username Instagram",
+                    "example": "iqstore78"
+                  }
+                },
+                "required": ["username"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stalker/mlstalk": {
+      "get": {
+        "summary": "",
+        "description": "Mobile Legends Stalker",
+        "tags": [
+          "Stalker"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Input ID Mobile Legends Anda",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "696964467"
+            }
+          },
+          {
+            "name": "zone",
+            "in": "query",
+            "description": "Input Zone Mobile Legends Anda",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "8770"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }, 
+   "/api/search/nesamedia": {
+      "get": {
+        "summary": "",
+        "description": "Search Apk Here!",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "apk",
+            "in": "query",
+            "description": "Masukkan Nama Apk",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Termux"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search/codesearch": {
+      "get": {
+        "summary": "Code Search Using Github",
+        "description": "Code Search Using Github Code Search",
+        "tags": [
+          "Stalker"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "Masukkan Query Code Search",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Axios"
+            }
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "description": "Masukkan Bahasa Pemrograman",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "javascript"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }, 
+    "/api/say": {
+      "get": {
+        "summary": "",
+        "description": "test server",
+        "tags": [
+          "Testings Developer"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "`Try Say Hello World`",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Hello World!"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
