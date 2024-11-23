@@ -54,6 +54,49 @@
         }
       }
     },
+    "/api/openai/gpt3-5-turbo": {
+      "get": {
+        "summary": "Chatting With Ai Realtime",
+        "description": "iask Ai Realtime",
+        "tags": [
+          "Artificial Intelligence"
+        ],
+        "parameters": [
+          {
+            "name": "text",
+            "in": "query",
+            "description": "iask",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "siapa prabowo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/downloader/tiktokdl": {
       "get": {
         "summary": "",
@@ -420,6 +463,49 @@
         }
       }
     },
+   "/api/search/modcombo": {
+      "get": {
+        "summary": "Apk Mod",
+        "description": "Search Mod Apk Here!",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "apk",
+            "in": "query",
+            "description": "Masukkan Nama Apk",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Minecraft"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },    
     "/api/search/codesearch": {
       "get": {
         "summary": "Code Search Using Github",
