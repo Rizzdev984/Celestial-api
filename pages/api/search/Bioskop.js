@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
   const { film } = req.query;
   try {
-     const filmm = await film(film)
+     const filmm = await bioskop(film)
      return res.status(200).json({
        status: true,
        author: "Celestial",
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   }
 }
 
-async function film(search) { 
+async function bioskop(search) { 
       const response = await axios.get(`https://nontonfilmgratis.club/?s=${search}`);
       const $ = cheerio.load(response.data);
       let results = [];
