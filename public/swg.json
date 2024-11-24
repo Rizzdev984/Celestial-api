@@ -251,6 +251,54 @@
         }
       }
     },
+    "/api/downloader/twitter": {
+      "get": {
+        "summary": "twitter",
+        "description": "twitter downloader",
+        "tags": [
+          "Downloader"
+        ],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "description": "Paste Your Twitter Downloader",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "https://twitter.com/elonmusk/status/1855140564217610486?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet%7Ctwtr%5Etrue"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/stalker/ttstalk": {
       "get": {
         "summary": "",
