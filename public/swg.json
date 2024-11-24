@@ -54,7 +54,7 @@
         }
       }
     },
-    "/api/openai/gpt3-5-turbo": {
+    "/api/openai/Iask": {
       "get": {
         "summary": "Chatting With Ai Realtime",
         "description": "iask Ai Realtime",
