@@ -36,7 +36,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -79,7 +84,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -122,7 +132,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -165,7 +180,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -208,7 +228,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -251,7 +276,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -300,7 +330,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -349,7 +384,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -402,7 +442,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -445,7 +490,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -488,7 +538,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -541,7 +596,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
                 }
               }
             }
@@ -559,6 +619,54 @@
         }
       }
     }, 
+    "/api/search/playstore": {
+      "get": {
+        "summary": "PlayStore Search!",
+        "description": "PlayStore Search All Details",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "apk",
+            "in": "query",
+            "description": "Masukkan Nama Apk",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Termux"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "URL download tiktok" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/say": {
       "get": {
         "summary": "",
