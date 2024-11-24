@@ -40,7 +40,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -88,7 +88,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -136,7 +136,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -184,7 +184,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -232,7 +232,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -280,7 +280,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -334,7 +334,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -388,7 +388,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -446,7 +446,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -494,7 +494,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -542,7 +542,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -600,7 +600,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
@@ -648,7 +648,7 @@
                   "properties": {
                     "status": { "type": "boolean", "example": true },
                     "author": { "type": "string", "example": "Celestial" },
-                    "result": { "type": "string", "example": "URL download tiktok" }
+                    "result": { "type": "string", "example": "string" }
                   }
                 }
               }
