@@ -855,7 +855,7 @@
 "/api/search/jkt": {
       "get": {
         "summary": "Search Member Jkt48",
-        "description": "JKT48 Woi Bukan JMK48😹",
+        "description": "JKT48 Woi Bukan JMK48",
         "tags": [
           "Search"
         ],
