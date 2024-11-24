@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Parameter Text Tidak Di isi"})
   }
   try {
-     const iaskk = await iask(text)
+     const iaskk = await pencarianTeks(text)
      return res.status(200).json({
        status: true,
        author: "Celestial",
