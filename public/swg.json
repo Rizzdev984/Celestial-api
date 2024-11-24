@@ -852,6 +852,54 @@
     }
   }
 }, 
+      "/api/search/jkt48": {
+      "get": {
+        "summary": "Search Member Jkt48",
+        "description": "JKT48 Woi Bukan JMK48😹",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "member",
+            "in": "query",
+            "description": "Masukkan Nama member",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Freya"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },    
     "/api/say": {
       "get": {
         "summary": "",
