@@ -1,3 +1,28 @@
+import { run } from 'shannz-playwright'
+
+export default async function handler(req, res) {
+  if (req.method !== "GET") {
+    return res.status(403).json({ error: "Methode Not Allowed" })
+  }
+  const { text } = req.query;
+  if (!text) {
+    return res.status(400).json({ error: "Parameter Text Tidak Di isi"})
+  }
+  try {
+     const iaskk = await pencarianTeks(text)
+     return res.status(200).json({
+       status: true,
+       author: "Celestial",
+       result: iaskk.jawaban
+     })
+  } catch (e) {
+    console.error("Now Error In Iask Ai:", e)
+    return res.status(500).json({
+      error: e.message
+    })
+  }
+}
+
 async function pencarianTeks(kueri) {
   const kode = `
     const { chromium } = require('playwright');
