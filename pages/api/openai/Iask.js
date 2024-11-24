@@ -13,7 +13,7 @@ export default async function handler(req, res) {
      return res.status(200).json({
        status: true,
        author: "Celestial",
-       result: iaskk
+       result: iaskk.jawaban
      })
   } catch (e) {
     console.error("Now Error In Iask Ai:", e)
