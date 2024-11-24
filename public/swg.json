@@ -852,7 +852,7 @@
     }
   }
 }, 
-      "/api/search/jkt48": {
+"/api/search/jkt48": {
       "get": {
         "summary": "Search Member Jkt48",
         "description": "JKT48 Woi Bukan JMK48😹",
