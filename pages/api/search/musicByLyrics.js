@@ -39,7 +39,7 @@ async function musikbylirik(lrk) {
 
   return {
     title,
-    artis: "by" + author,
+    artis: "by " + author,
     album,
     url: fullUrl
   };
