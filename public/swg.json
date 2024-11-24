@@ -810,7 +810,48 @@
           }
         }
       }
-    },    
+    },   
+   "/api/search/mangaBat": {
+  "get": {
+    "summary": "Manga Bat Search",
+    "description": "Fetches the latest manga from MangaBat.",
+    "tags": [
+      "Search"
+    ],
+    "parameters": [],  
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string", "example": "Lord of Destiny Wheel" },
+                  "chapter": { "type": "string", "example": "Chapter 59" },
+                  "mangaLink": { "type": "string", "example": "https://h.mangabat.com/read-db407694" },
+                  "imageUrl": { "type": "string", "example": "https://avt.mkklcdnv6temp.com/31/i/34-1714097452.jpg" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}, 
     "/api/say": {
       "get": {
         "summary": "",
