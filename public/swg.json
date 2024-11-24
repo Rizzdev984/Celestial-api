@@ -609,12 +609,60 @@
         }
       }
     },    
+   "/api/search/lyrics": {
+      "get": {
+        "summary": "Search Your Music Lyrics",
+        "description": "Lyrics Here",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "music",
+            "in": "query",
+            "description": "Masukkan Nama Lagu",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Sekuat Hatimu"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },    
     "/api/search/codesearch": {
       "get": {
         "summary": "Code Search Using Github",
         "description": "Code Search Using Github Code Search",
         "tags": [
-          "Stalker"
+          "Search"
         ],
         "parameters": [
           {
