@@ -763,6 +763,54 @@
         }
       }
     },
+   "/api/search/musicByLyrics": {
+      "get": {
+        "summary": "Ketahui Musik Hanya Dengan Lirik!",
+        "description": "",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "lirik",
+            "in": "query",
+            "description": "Masukkan Lyrics",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Sekuat Hatimu"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },    
     "/api/say": {
       "get": {
         "summary": "",
