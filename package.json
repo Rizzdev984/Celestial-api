@@ -16,7 +16,6 @@
     "hercai": "^12.4.0", 
     "node-fetch": "^3.3.2",
     "react": "^18.0.0",
-    "similarity": "1.2.1", 
     "fs": "0.0.1-security", 
     "path": "^0.12.7", 
     "shannz-playwright": "^1.0.8", 
