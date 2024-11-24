@@ -183,22 +183,22 @@
         }
       }
     },
-    "/api/downloader/brat": {
+    "/api/downloader/instagram": {
       "get": {
-        "summary": "",
-        "description": "brat Downloader",
+        "summary": "Download Instagram Here!",
+        "description": "Instagram Downloader",
         "tags": [
           "Downloader"
         ],
         "parameters": [
           {
-            "name": "text",
+            "name": "url",
             "in": "query",
-            "description": "Masukkan Text Anda",
-            "required": false,
+            "description": "Masukkan Url Anda",
+            "required": true,
             "schema": {
               "type": "string",
-              "example": "Hello World"
+              "example": "https://www.instagram.com/reel/C9vd95Boxy_/?igsh=MTE5MXRqbDBhZXFjMA=="
             }
           }
         ],
