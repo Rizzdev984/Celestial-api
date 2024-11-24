@@ -22,9 +22,6 @@ export default async function handler(req, res) {
   }
 }
 
-> const axios = require('axios');
-const cheerio = require('cheerio');
-
 async function musikbylirik(lrk) {
   const ress = await axios.get(`https://songsear.ch/q/${lrk}`);
   const $ = cheerio.load(ress.data);
@@ -47,5 +44,3 @@ async function musikbylirik(lrk) {
     url: fullUrl
   };
 }
-
-musikbylirik("Sekuat Hatimu")
