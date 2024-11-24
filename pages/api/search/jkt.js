@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { findBestMatch } from 'fuzzysearch';
+import similarity from 'similarity';
 
 export default async function handler(req, res) {
   if (req.method !== "GET") {
@@ -58,16 +58,22 @@ async function jkt(query) {
     }
   });
 
-  const bestMatch = findBestMatch(query, memberData.map(member => member.nama));
-  const bestFullNameMatch = findBestMatch(query, memberData.map(member => member.nama_full));
+  let bestMatch = null;
+  let highestScore = 0;
 
-  let result = bestMatch.bestMatch;
-  if (bestFullNameMatch.bestMatch.score > bestMatch.bestMatch.score) {
-    result = bestFullNameMatch.bestMatch;
-  }
+  memberData.forEach(member => {
+    const nameScore = similarity(query.toLowerCase(), member.nama.toLowerCase());
+    const fullNameScore = similarity(query.toLowerCase(), member.nama_full.toLowerCase());
+    const score = Math.max(nameScore, fullNameScore);
 
-  if (result && result.score >= 0.5) {
-    return memberData[memberData.findIndex(member => member.nama === result.target || member.nama_full === result.target)];
+    if (score > highestScore) {
+      highestScore = score;
+      bestMatch = member;
+    }
+  });
+
+  if (bestMatch && highestScore >= 0.5) {
+    return bestMatch;
   } else {
     throw new Error('No matching member found.');
   }
