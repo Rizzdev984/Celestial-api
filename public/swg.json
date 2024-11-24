@@ -463,22 +463,22 @@
         }
       }
     },
-   "/api/search/modcombo": {
+   "/api/search/Bioskop": {
       "get": {
-        "summary": "Apk Mod",
-        "description": "Search Mod Apk Here!",
+        "summary": "Search Film Bioskop",
+        "description": "Search Film Bioskop Here",
         "tags": [
           "Search"
         ],
         "parameters": [
           {
-            "name": "apk",
+            "name": "film",
             "in": "query",
-            "description": "Masukkan Nama Apk",
+            "description": "Masukkan Nama Film",
             "required": true,
             "schema": {
               "type": "string",
-              "example": "Minecraft"
+              "example": "Marsha"
             }
           }
         ],
