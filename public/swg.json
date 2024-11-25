@@ -370,11 +370,21 @@
           {
             "name": "url",
             "in": "query",
-            "description": "Masukkan Url Anda",
+            "description": "Masukkan Url Instagram",
             "required": true,
             "schema": {
               "type": "string",
-              "example": "https://www.instagram.com/reel/C9vd95Boxy_/?igsh=MTE5MXRqbDBhZXFjMA=="
+              "example": "https://www.instagram.com/p/C_hTqZUzH_5/?img_index=1&igsh=dTI4aDlkeGsyZjM0"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Masukkan Type ( Video / Photo )",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "photo"
             }
           }
         ],
@@ -503,6 +513,69 @@
         }
       }
     },
+    "/api/downloader/bratGenerator": {
+      "get": {
+        "summary": "Memproses teks untuk menghasilkan gambar",
+        "parameters": [
+          {
+            "name": "text",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Contoh teks"
+            },
+            "description": "Teks yang akan diproses"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Gambar berhasil dihasilkan",
+            "content": {
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "example": "iVBORw0KGgoAAAANSUhEUgAAAOEAA..."
+              }
+            }
+          },
+          "400": {
+            "description": "Teks tidak diberikan",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Text Is Undefined"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Terjadi kesalahan internal",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Internal Server Error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }, 
     "/api/stalker/ttstalk": {
       "get": {
         "summary": "",
@@ -1103,7 +1176,199 @@
           }
         }
       }
-    },    
+    },   
+    "/api/search/manga/manga-V1": {
+      "get": {
+        "summary": "", 
+        "description": "manga Search Engine",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "manga",
+            "in": "query",
+            "description": "Masukkan Nama manga",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },   
+    "/api/search/manga/manga-V2": {
+      "get": {
+        "summary": "", 
+        "description": "manga Search Engine",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "manga",
+            "in": "query",
+            "description": "Masukkan Nama manga",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }, 
+    "/api/search/manga/manga-V3": {
+      "get": {
+        "summary": "", 
+        "description": "manga Search Engine",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "manga",
+            "in": "query",
+            "description": "Masukkan Nama manga",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },  
+    "/api/search/manga/detail": {
+      "get": {
+        "summary": "", 
+        "description": "Manga Detail ( Myanimelist / Animeplanet )",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "description": "Masukkan Url",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean", "example": true },
+                    "author": { "type": "string", "example": "Celestial" },
+                    "result": { "type": "string", "example": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "parameter format not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },   
     "/api/say": {
       "get": {
         "summary": "",
