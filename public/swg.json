@@ -518,7 +518,7 @@
         "summary": "Memproses teks untuk menghasilkan gambar",
         "tags": [
           "Downloader"
-        ]
+        ], 
         "parameters": [
           {
             "name": "text",
