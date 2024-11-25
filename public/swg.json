@@ -1177,7 +1177,7 @@
         }
       }
     },   
-    "/api/search/manga/manga-V1": {
+    "/api/search/manga/manga-v1": {
       "get": {
         "summary": "", 
         "description": "manga Search Engine",
