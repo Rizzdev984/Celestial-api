@@ -111,6 +111,22 @@
               }
             }
           }
+"headers": {
+  "Content-Type": {
+    "description": "Content type of the request body",
+    "schema": {
+      "type": "string",
+      "example": "application/json"
+    }
+  },
+  "Authorization": {
+    "description": "API Authorization token for access",
+    "schema": {
+      "type": "string",
+      "example": "Bearer Celestial-21-Pro-Generate/chat"
+    }
+  }
+}, 
         },
         "400": {
           "description": "Bad Request - Missing or invalid parameters in the request body",
@@ -188,81 +204,79 @@
       ]
     }
   }, 
-"/api/openai/celestial-21-Quite": {
-  "post": {
-    "summary": "Chatting With Celestial-21-Quite",
-    "description": "Chat Now!",
-    "tags": ["Artificial Intelligence"],
-    "requestBody": {
-      "required": true,
-      "content": {
-        "application/json": {
-          "schema": {
-            "type": "object",
-            "properties": {
-              "text": {
-                "type": "string",
-                "description": "Masukkan Pertanyaan Anda",
-                "example": "Hai, apa kabar?"
-              }
-            },
-            "required": ["text"]
-          }
-        }
-      }
-    },
-    "responses": {
-      "200": {
-        "description": "Response Success",
+  "/api/openai/celestial-21-Quite": {
+    "post": {
+      "summary": "Chatting With Celestial-21-Quite",
+      "description": "Chat Now!",
+      "tags": [
+        "Artificial Intelligence"
+      ],
+      "requestBody": {
+        "required": true,
         "content": {
           "application/json": {
             "schema": {
               "type": "object",
               "properties": {
-                "status": { "type": "boolean", "example": true },
-                "author": { "type": "string", "example": "Celestial" },
-                "result": { "type": "string", "example": "Saya baik, terima kasih!" }
+                "text": {
+                  "type": "string",
+                  "description": "Masukkan Pertanyaan Mu",
+                  "example": "Hai"
+                }
+              },
+              "required": ["text"]
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "boolean",
+                    "example": true
+                  },
+                  "author": {
+                    "type": "string",
+                    "example": "Celestial"
+                  },
+                  "result": {
+                    "type": "string",
+                    "example": "string."
+                  }
+                }
               }
             }
           }
-        }
-      },
-      "400": {
-        "description": "Bad Request",
-        "content": {
-          "application/json": {
+        },
+        "headers": {
+          "Content-Type": {
+            "description": "Content type of the request body",
             "schema": {
               "type": "string",
-              "example": "Invalid Input"
+              "example": "application/json"
             }
           }
-        }
-      },
-      "403": {
-        "description": "Method Not Allowed",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "string",
-              "example": "Method GET Not Allowed"
-            }
-          }
-        }
-      },
-      "500": {
-        "description": "Server Error",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "string",
-              "example": "Failed To Generate Response"
+        }, 
+        "400": {
+          "description": "Parameter format not found",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "example": "Bad Request"
+              }
             }
           }
         }
       }
     }
-  }
-}, 
+  },   
     "/api/openai/Iask": {
       "get": {
         "summary": "Chatting With Ai Realtime",
