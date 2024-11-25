@@ -5,12 +5,12 @@ export default async function handler(req, res) {
   if (req.method !== "GET") {
     return res.status(403).json({ error: "Methode Not Allowed" })
   }
-  const { url } = req.query;
+  const { url, type } = req.query;
   if (!url) {
     return res.status(400).json({ error: "Url Not Defined" })
   }
   try {
-    const idDownload = await indown(url)
+    const idDownload = await indown(url, type)
     return res.status(200).json({
       status: true,
       author: "Celestial",
@@ -26,6 +26,9 @@ export default async function handler(req, res) {
 const types = [ 'photo', 'video' ];
 
 async function indown(urls, type) {
+    if (!types.includes(type)) {
+    return "Type Invalid In Download"
+    }
     const url = 'https://indownloader.app/request';
     const data = new URLSearchParams();
     data.append('link', urls);
