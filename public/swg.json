@@ -5,7 +5,7 @@
     "title": "Celestial-Api's",
     "description": "Simple Rest Api Made With Swagger And Base With Balxzz",
     "contact": {
-      "name": "Chat AI",
+      "name": "Chat AI - Default Models",
       "url": "https://celestial-flame.vercel.app"
     },
      "x-thankyou": "Special thanks to balxz for the inspiration and development of this API!"
