@@ -1324,10 +1324,10 @@
         }
       }
     },  
-    "/api/search/manga/detail": {
+    "/api/search/manga/details": {
       "get": {
         "summary": "", 
-        "description": "Manga Detail ( Myanimelist / Animeplanet )",
+        "description": "Manga Detail ( Myanimelist / Mangaplanet )",
         "tags": [
           "Search"
         ],
@@ -1339,7 +1339,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": ""
+              "example": "https://mangaplanet.com/comic/66a2155ff0894"
             }
           }
         ],
