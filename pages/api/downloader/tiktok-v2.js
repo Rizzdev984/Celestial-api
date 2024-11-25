@@ -74,11 +74,11 @@ async function tiktokv2(url) {
 
       if (!res.size && !res.wm_size && !res.hd_size) {
         res.images.forEach((v) => {
-          data.push({ type: "photo", url: v });
+          data.push({ type: "photo", url: "https://www.tikwm.com" + v });
         });
       } else {
-        if (res.wmplay) data.push({ type: "watermark", url: res.wmplay });
-        if (res.play) data.push({ type: "nowatermark", url: res.play });
+        if (res.wmplay) data.push({ type: "watermark", url: "https://www.tikwm.com" + res.wmplay });
+        if (res.play) data.push({ type: "nowatermark", url: "https://www.tikwm.com" + res.play });
         if (res.hdplay)
           data.push({ type: "nowatermark_hd", url: res.hdplay });
       }
@@ -90,7 +90,7 @@ async function tiktokv2(url) {
         region: res.region,
         id: res.id,
         duration: `${res.duration} Seconds`,
-        cover: res.cover,
+        cover: "https://www.tikwm.com" + res.cover,
         size_wm: res.wm_size,
         size_nowm: res.size,
         size_nowm_hd: res.hd_size,
@@ -113,7 +113,7 @@ async function tiktokv2(url) {
           id: res.author.id,
           fullname: res.author.unique_id,
           nickname: res.author.nickname,
-          avatar: res.author.avatar,
+          avatar: "https://www.tikwm.com" + res.author.avatar,
         },
       };
       resolve(json);
