@@ -471,7 +471,7 @@
         "description": "TikTok Downloader",
         "tags": [
           "Downloader"
-        ],
+        ], 
         "parameters": [
           {
             "name": "url",
@@ -516,6 +516,7 @@
     "/api/downloader/bratGenerator": {
       "get": {
         "summary": "Memproses teks untuk menghasilkan gambar",
+        "description": "Memproses Text Lalu Di Ubah Menjadi Gambar Yang Di Sebut Brat", 
         "tags": [
           "Downloader"
         ], 
