@@ -188,79 +188,81 @@
       ]
     }
   }, 
-  "/api/openai/celestial-21-Quite": {
-    "post": {
-      "summary": "Chatting With Celestial-21-Quite",
-      "description": "Chat Now!",
-      "tags": [
-        "Artificial Intelligence"
-      ],
-      "requestBody": {
-        "required": true,
+"/api/openai/celestial-21-Quite": {
+  "post": {
+    "summary": "Chatting With Celestial-21-Quite",
+    "description": "Chat Now!",
+    "tags": ["Artificial Intelligence"],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Masukkan Pertanyaan Anda",
+                "example": "Hai, apa kabar?"
+              }
+            },
+            "required": ["text"]
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Response Success",
         "content": {
           "application/json": {
             "schema": {
               "type": "object",
               "properties": {
-                "text": {
-                  "type": "string",
-                  "description": "Masukkan Pertanyaan Mu",
-                  "example": "Hai"
-                }
-              },
-              "required": ["text"]
+                "status": { "type": "boolean", "example": true },
+                "author": { "type": "string", "example": "Celestial" },
+                "result": { "type": "string", "example": "Saya baik, terima kasih!" }
+              }
             }
           }
         }
       },
-      "responses": {
-        "200": {
-          "description": "Success",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "status": {
-                    "type": "boolean",
-                    "example": true
-                  },
-                  "author": {
-                    "type": "string",
-                    "example": "Celestial"
-                  },
-                  "result": {
-                    "type": "string",
-                    "example": "string."
-                  }
-                }
-              }
-            }
-          }
-        },
-        "headers": {
-          "Content-Type": {
-            "description": "Content type of the request body",
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
             "schema": {
               "type": "string",
-              "example": "application/json"
+              "example": "Invalid Input"
             }
           }
-        }, 
-        "400": {
-          "description": "Parameter format not found",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "string",
-                "example": "Bad Request"
-              }
+        }
+      },
+      "403": {
+        "description": "Method Not Allowed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string",
+              "example": "Method GET Not Allowed"
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string",
+              "example": "Failed To Generate Response"
             }
           }
         }
       }
     }
-  },   
+  }
+}, 
     "/api/openai/Iask": {
       "get": {
         "summary": "Chatting With Ai Realtime",
