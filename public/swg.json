@@ -110,7 +110,7 @@
                 }
               }
             }
-          }
+          }, 
 "headers": {
   "Content-Type": {
     "description": "Content type of the request body",
